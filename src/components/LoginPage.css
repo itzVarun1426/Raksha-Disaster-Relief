@@ -1,13 +1,27 @@
-
+body {
+  background: url("../assets/indianwoman.jpg");
+  background-size: cover;
+}
+.Elements-container {
+  backdrop-filter: blur(4px);
+  height: 100vh;
+}
+.login-logo-image img {
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 20px;
+  background-color: white;
+  border-radius: 90px;
+}
 .form-container {
   display: flex;
   justify-content: center;
-  align-items: center; 
-  height: 100vh;
-  width: 100vw; 
-  /* margin: 0;
-  padding: 0;
-  box-sizing: border-box; */
+  align-items: center;
+  height: 100%;
+  width: 100vw;
 }
 
 .form {
@@ -15,15 +29,15 @@
   --bg-dark: #014bdb;
   --clr: #0066ff;
   --clr-alpha: #9c9c9c60;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   background: white;
-  padding: 2rem; 
+  padding: 2rem;
   border-radius: 10px;
   border: 2px solid #0066ff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

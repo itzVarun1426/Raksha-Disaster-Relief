@@ -27,11 +27,7 @@ function Navbar() {
                 Guide
               </Link>
             </li>
-            <li>
-              <Link to="/about" className="nav-link">
-                About
-              </Link>
-            </li>
+         
             <li>
               <Link to="#" className="nav-link">
                 Helpline

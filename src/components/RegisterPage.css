@@ -1,72 +1,141 @@
-/* RegisterPage.css */
-
 body {
-  margin: 0;
-  padding: 0;
+  background: url("../assets/indianwoman.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.register-logo-image img {
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 20px;
+  background-color: white;
+  border-radius: 90px;
+}
+.register-page-container {
+  backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('https://source.unsplash.com/random/1920x1080/?abstract,blue') no-repeat center center/cover;
-  backdrop-filter: blur(8px);
+  width: 100vw;
 }
-
-.register-container {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 30px;
-  width: 350px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: #fff;
-}
-
-h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-form {
+.form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  background-color: whitesmoke;
+  color: #efefef;
+  border: 1px solid #014bdb;
 }
 
-input {
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #014bdb;
+}
+
+.signin {
+  font-size: 14.5px;
+  color: #014bdb;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a:hover {
+  text-decoration: underline green;
+}
+
+.signin a {
+  color: #0066ff;
+}
+
+.flex {
+  display: flex;
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.3);
-  color: #fff;
-  outline: none;
+  gap: 6px;
 }
 
-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+.form label {
+  position: relative;
 }
 
-button {
-  background-color: #007bff;
+.form label .input {
+  background-color: #9c9c9c60;
+  color: black;
+  width: 100%;
+  height: 55px;
+  padding: 20px 05px 05px 10px;
+  outline: 0;
+  border: 2px solid #014bdb;
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  color: #014bdb;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
   color: white;
-  padding: 12px;
-  font-size: 18px;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.input {
+  font-size: medium;
+}
+
+.submit {
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #d30073;
+  font-size: 16px;
+  transform: 0.3s ease;
+  background-color: whitesmoke;
+  border: 1px solid #d30073;
 }
 
-button:hover {
-  background-color: #0056b3;
+.submit:hover {
+  background-color: #d30073;
+  color: whitesmoke;
 }
 
-.error {
-  color: #ff4d4d;
-  font-size: 14px;
-  margin-top: 10px;
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
