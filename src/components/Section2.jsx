@@ -1,5 +1,5 @@
 import ndrfImg from "../assets/ndrfImg.jpg";
-
+import "./Section2.css";
 function Section2() {
   return (
     <>

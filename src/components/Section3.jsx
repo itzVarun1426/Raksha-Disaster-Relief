@@ -1,3 +1,4 @@
+import "./Section3.css";
 function Section3() {
   return (
     <>

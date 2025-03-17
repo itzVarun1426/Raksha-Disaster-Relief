@@ -12,11 +12,12 @@ import find from "../assets/find.png";
 import gov from "../assets/gov.png";
 import busInFloodImg from "../assets/busInFlood.jpg";
 import disasterReliefImg from "../assets/disasterRelief.jpg";
+import "./Section1.css";
 
-function Section() {
+function Section1() {
   const warningButtons = [
     { img: temp, title: "Fire", special: false },
-    { img: flood, title: "Flood", special: true },
+    { img: flood, title: "Flood", special: false },
     { img: earthquake, title: "Earthquake", special: false },
     { img: covid, title: "Covid", special: false },
     { img: landslide, title: "Landslide", special: false },
@@ -24,16 +25,16 @@ function Section() {
     { img: ice, title: "Ice", special: false },
     { img: drought, title: "drought", special: false },
     { img: storm, title: "Storm", special: false },
-    { img: shelter, title: "Shelter", special: false },
-    { img: find, title: "Find", special: false },
-    { img: gov, title: "Gov", special: false },
+    { img: shelter, title: "Shelter", special: true },
+    { img: find, title: "Find", special: true },
+    { img: gov, title: "Gov", special: true },
   ];
   return (
     <>
       <section className="page2">
         <div className="page2-content">
           <div className="page2-left">
-            <h2>Warning</h2>
+            <h2>News</h2>  
             <div className="page2-left-button">
               {warningButtons.map((item, index) => (
                 <div
@@ -67,4 +68,4 @@ function Section() {
   );
 }
 
-export default Section;
+export default Section1;

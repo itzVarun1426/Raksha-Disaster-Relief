@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import chatbotIcon from "../assets/chatbot.png";
 import rakshaLogo from "../assets/raksha-logo.png";
@@ -17,34 +18,34 @@ function Navbar() {
           </div>
           <ul>
             <li>
-              <a href="/" className="nav-link">
+              <Link to="/" className="nav-link">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="nav-link">
+              <Link to="#" className="nav-link">
                 Guide
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="nav-link">
+              <Link to="/about" className="nav-link">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="nav-link">
+              <Link to="#" className="nav-link">
                 Helpline
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/login" className="nav-link">
+              <Link to="/login" className="nav-link">
                 Login
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">
+              <Link to="#">
                 <img src={languageIcon} alt="" />
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -61,4 +62,5 @@ function Navbar() {
     </>
   );
 }
+
 export default Navbar;
