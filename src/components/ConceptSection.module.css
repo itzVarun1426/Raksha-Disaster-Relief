@@ -11,7 +11,7 @@
   flex-wrap: wrap;
 }
 
-.info-box {
+.infoBox {
   background-color: #d0dffd;
   border-radius: 20px;
   padding: 30px;
@@ -21,25 +21,25 @@
   cursor: pointer;
 }
 
-.info-box:hover {
+.infoBox:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.info-box h2 {
+.infoBox h2 {
   color: black;
   font-weight: 800;
   margin-bottom: 15px;
   font-size: 1.8rem;
 }
 
-.info-box p {
+.infoBox p {
   color: black;
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
-.concept-section {
+.conceptSection {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@
   line-height: 1.6;
 }
 
-.concept-title {
+.conceptTitle {
   color: white;
   font-size: 1.4rem;
   background-color: #0066ff;
@@ -86,7 +86,7 @@
   cursor: pointer;
 }
 
-.concept-title:hover {
+.conceptTitle:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -94,10 +94,11 @@
 .page5 {
   margin: 0 auto;
   max-width: 1000px;
-  .page5-header {
-    font-size: 40px;
-    color: #014bdb;
-    text-align: center;
-    font-weight: 900;
-  }
+}
+
+.page5Header {
+  font-size: 40px;
+  color: #014bdb;
+  text-align: center;
+  font-weight: 900;
 }

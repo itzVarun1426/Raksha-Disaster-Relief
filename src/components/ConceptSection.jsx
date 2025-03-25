@@ -1,9 +1,10 @@
-import "./ConceptSection.css";
+import styles from "./ConceptSection.module.css";
+
 function ConceptSection() {
   return (
     <>
-      <div className="page4">
-        <div className="info-box">
+      <div className={styles.page4}>
+        <div className={styles.infoBox}>
           <h2>What we do? 🤔</h2>
           <p>
             The disaster management platform focuses on providing efficient
@@ -13,7 +14,7 @@ function ConceptSection() {
             decision-making and response coordination during emergencies.
           </p>
         </div>
-        <div className="concept-section">
+        <div className={styles.conceptSection}>
           {[
             {
               title: "Concept of Alerts",
@@ -26,8 +27,8 @@ function ConceptSection() {
                 "The platform includes a missing person reporting feature that allows users to report missing individuals during disaster incidents. This function enables users to submit details, photos, and last known locations, helping authorities and responders coordinate search and rescue efforts effectively during emergencies.",
             },
           ].map((concept, index) => (
-            <div key={index} className="concept">
-              <div className="concept-title">{concept.title}</div>
+            <div key={index} className={styles.concept}>
+              <div className={styles.conceptTitle}>{concept.title}</div>
               <p>{concept.description}</p>
             </div>
           ))}

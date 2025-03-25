@@ -1,0 +1,139 @@
+body {
+  overflow-x: hidden;
+}
+
+.elementsContainer {
+  backdrop-filter: blur(4px);
+  height: 100vh;
+}
+
+.loginLogoImage img {
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  left: 20px;
+  background-color: white;
+  border-radius: 90px;
+}
+
+.loginHeading {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  color: #014bdb;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+}
+
+.form {
+  --bg-light: #efefef;
+  --bg-dark: #014bdb;
+  --clr: #0066ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid var(--bg-dark);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputSpan {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.form input {
+  border-radius: 0.5rem;
+  padding: 1.2rem 0.75rem 0.5rem;
+  width: 100%;
+  border: 2px solid var(--bg-dark);
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Highlight border on focus */
+.form input:focus {
+  border-color: var(--clr);
+}
+
+/* Floating Label Effect */
+.label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0066ff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background: white;
+  padding: 0 5px;
+  margin-left: -5px;
+}
+
+/* Label moves up when input is focused or has content */
+.form input:focus ~ .label,
+.form input:not(:placeholder-shown) ~ .label {
+  top: 0;
+  left: 10px;
+  transform: translateY(-50%) scale(0.8);
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--clr);
+}
+
+/* Hide placeholder text */
+.form input::placeholder {
+  color: transparent;
+}
+
+.submit {
+  padding: 1rem 0.75rem;
+  width: 100%;
+  border-radius: 3rem;
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.submit:hover {
+  background-color: var(--clr);
+  color: var(--bg-dark);
+}
+
+.forgotPassword {
+  text-decoration: none;
+  color: var(--bg-dark);
+}
+
+.forgotPassword a {
+  color: var(--clr);
+}
+
+.signupLink {
+  color: #014bdb;
+}

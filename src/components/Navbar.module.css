@@ -33,10 +33,11 @@
   text-decoration: none;
   transition: 0.5s ease-in-out;
   font-size: 1.2rem;
-  &:hover {
-    color: #000000;
-    border-bottom: 3px solid #000000;
-  }
+}
+
+.nav ul li a:hover {
+  color: #000000;
+  border-bottom: 3px solid #000000;
 }
 
 .nav ul li img {
@@ -59,12 +60,12 @@
 
 .scrollText {
   background-color: #f8f9fa;
-  /* padding: 5px 0; */
   width: 100%;
   font-size: 1.2rem;
-  :hover{
-    color: red;
-  }
+}
+
+.scrollText:hover {
+  color: red;
 }
 
 .scrollText marquee {
@@ -102,9 +103,11 @@
 .mainAlertSlide p {
   color: red;
   cursor: pointer;
-  &:hover {
-    transform: scale(1.02);
-  }
+  transition: transform 0.3s ease;
+}
+
+.mainAlertSlide p:hover {
+  transform: scale(1.02);
 }
 
 .navLink {
@@ -119,12 +122,39 @@
   border-bottom: 3px solid #000000;
 }
 
-.navLink.active {
-  color: #000000;
+/* Fix for React Router NavLink active state */
+.active {
+  color: #000000 !important;
   border-bottom: 3px solid #000000;
 }
 
 .languageIcon {
   height: 24px;
   width: 24px;
+}
+
+.chatbotPopup {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 1001;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: min-content;
+}
+
+.closeButton {
+  background-color: #014bdb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.closeButton:hover {
+  background-color: #000000;
 }

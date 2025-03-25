@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import rakshaLogo from "../assets/raksha-logo.png";
-import "./RegisterPage.css";
+import styles from "./RegisterPage.module.css";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -11,12 +11,12 @@ const RegisterPage = () => {
     password: "",
     birthDate: "",
     gender: "Male",
-
   });
+
   const [error, setError] = useState("");
 
   const validateForm = () => {
-    if (Object.values(formData).some(value => value.trim() === "")) {
+    if (Object.values(formData).some((value) => value.trim() === "")) {
       return "All fields are required.";
     }
     if (!/^\d{12}$/.test(formData.aadhaarNumber)) {
@@ -32,7 +32,10 @@ const RegisterPage = () => {
   };
 
   const handleChange = (e) => {
-    setFormData(prevState => ({ ...prevState, [e.target.name]: e.target.value }));
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -47,36 +50,75 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="register-page-container">
-      <Link className="register-logo-image" to="/">
+    <div className={styles.registerPageContainer}>
+      <Link className={styles.registerLogoImage} to="/">
         <img src={rakshaLogo} alt="logo" />
       </Link>
-      <form className="form">
-        <p className="title">Register</p>
-        <div className="flex">
-          <label>
-            <input required placeholder type="text" className="input" />
+      <form className={styles.formContainer} onSubmit={handleSubmit}>
+        <p className={styles.registerTitle}>Register</p>
+        <div className={styles.inputGroup}>
+          <label className={styles.inputLabel}>
+            <input
+              required
+              placeholder=" "
+              type="text"
+              className={styles.inputField}
+              name="firstName"
+              onChange={handleChange}
+            />
             <span>Firstname</span>
           </label>
-          <label>
-            <input required placeholder type="text" className="input" />
+          <label className={styles.inputLabel}>
+            <input
+              required
+              placeholder=" "
+              type="text"
+              className={styles.inputField}
+              name="lastName"
+              onChange={handleChange}
+            />
             <span>Lastname</span>
           </label>
         </div>
-        <label>
-          <input required placeholder type="email" className="input" />
+        <label className={styles.inputLabel}>
+          <input
+            required
+            placeholder=" "
+            type="email"
+            className={styles.inputField}
+            name="email"
+            onChange={handleChange}
+          />
           <span>Email</span>
         </label>
-        <label>
-          <input required placeholder type="password" className="input" />
+        <label className={styles.inputLabel}>
+          <input
+            required
+            placeholder=" "
+            type="password"
+            className={styles.inputField}
+            name="password"
+            onChange={handleChange}
+          />
           <span>Password</span>
         </label>
-        <label>
-          <input required placeholder type="password" className="input" />
-          <span>Confirm password</span>
+        <label className={styles.inputLabel}>
+          <input
+            required
+            placeholder=" "
+            type="password"
+            className={styles.inputField}
+            name="confirmPassword"
+            onChange={handleChange}
+          />
+          <span>Confirm Password</span>
         </label>
-        <button className="submit">Submit</button>
-        <p className="signin">Already have an acount ? <Link to="/login">Signin</Link></p>
+        <button className={styles.submitButton} type="submit">
+          Submit
+        </button>
+        <p className={styles.signInText}>
+          Already have an account? <Link to="/login">Sign in</Link>
+        </p>
       </form>
     </div>
   );

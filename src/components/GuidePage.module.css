@@ -1,7 +1,8 @@
-.guide-page-container {
+.guidePageContainer {
   margin-top: 120px;
 }
-.guide-container {
+
+.guideContainer {
   max-width: 100%;
   margin: 0;
   padding: 2rem;
@@ -25,7 +26,7 @@
   }
 }
 
-.guide-container h1 {
+.guideContainer h1 {
   text-align: center;
   color: #014bdb;
   margin-bottom: 2rem;
@@ -48,8 +49,8 @@
   }
 }
 
-.guide-container h1::after {
-  content: '';
+.guideContainer h1::after {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -70,7 +71,7 @@
   }
 }
 
-.guide-grid {
+.guideGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
@@ -82,7 +83,7 @@
   animation: fadeIn 0.8s ease-out 0.3s backwards;
 }
 
-.guide-category {
+.guideCategory {
   background: white;
   border-radius: 10px;
   padding: 1.2rem;
@@ -106,20 +107,32 @@
   }
 }
 
-.guide-category:nth-child(1) { animation-delay: 0.4s; }
-.guide-category:nth-child(2) { animation-delay: 0.5s; }
-.guide-category:nth-child(3) { animation-delay: 0.6s; }
-.guide-category:nth-child(4) { animation-delay: 0.7s; }
-.guide-category:nth-child(5) { animation-delay: 0.8s; }
-.guide-category:nth-child(6) { animation-delay: 0.9s; }
+.guideCategory:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.guideCategory:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.guideCategory:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.guideCategory:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.guideCategory:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.guideCategory:nth-child(6) {
+  animation-delay: 0.9s;
+}
 
-.guide-category:hover {
+.guideCategory:hover {
   transform: translateY(-3px) scale(1.02);
   border-color: #0066ff;
   box-shadow: 0 4px 8px rgba(1, 75, 219, 0.1);
 }
 
-.guide-category h2 {
+.guideCategory h2 {
   color: #014bdb;
   margin-bottom: 1rem;
   font-size: 1.3rem;
@@ -132,8 +145,8 @@
   position: relative;
 }
 
-.guide-category h2::after {
-  content: '';
+.guideCategory h2::after {
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -143,18 +156,18 @@
   transition: width 0.3s ease;
 }
 
-.guide-category:hover h2::after {
+.guideCategory:hover h2::after {
   width: 100%;
 }
 
-.guide-list {
+.guideList {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
   flex: 1;
 }
 
-.guide-item {
+.guideItem {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -167,8 +180,8 @@
   overflow: hidden;
 }
 
-.guide-item::before {
-  content: '';
+.guideItem::before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -179,17 +192,17 @@
   transition: transform 0.3s ease;
 }
 
-.guide-item:hover {
+.guideItem:hover {
   background: #e9ecef;
   transform: translateX(3px);
   border-color: #014bdb;
 }
 
-.guide-item:hover::before {
+.guideItem:hover::before {
   transform: scaleY(1);
 }
 
-.guide-item h3 {
+.guideItem h3 {
   color: #014bdb;
   font-size: 1.1rem;
   font-weight: 600;
@@ -197,7 +210,7 @@
   transition: color 0.3s ease;
 }
 
-.guide-item p {
+.guideItem p {
   color: #666;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -205,32 +218,61 @@
   transition: color 0.3s ease;
 }
 
-.guide-item:hover h3,
-.guide-item:hover p {
+.guideItem:hover h3,
+.guideItem:hover p {
+  color: #014bdb;
+}
+
+.guideSection {
+  margin-bottom: 1rem;
+}
+
+.guideSection h3 {
+  color: #014bdb;
+  margin-bottom: 0.5rem;
+}
+
+.guideSection ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guideSection li {
+  color: #014bdb;
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.guideSection li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
   color: #014bdb;
 }
 
 @media (max-width: 768px) {
-  .guide-container {
+  .guideContainer {
     padding: 1.5rem 1rem;
   }
 
-  .guide-container h1 {
+  .guideContainer h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
 
-  .guide-grid {
+  .guideGrid {
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 0;
   }
 
-  .guide-category {
+  .guideCategory {
     padding: 1rem;
   }
 
-  .guide-item {
+  .guideItem {
     padding: 0.8rem;
   }
-} 
+}

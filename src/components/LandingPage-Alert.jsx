@@ -2,9 +2,9 @@ import "./LandingPage-Alert.css";
 function LandingPageAlert() {
   return (
     <>
-      <div class="main-alert">
-        <div class="main-alert-box">
-          <div class="main-alert-slide">
+      <div className="main-alert">
+        <div className="main-alert-box">
+          <div className="main-alert-slide">
             <div>**Alerts**</div>
             <p>*Cyclone in Odisha</p>
             <p>*Massive flood in Waynad , Kerala </p>
