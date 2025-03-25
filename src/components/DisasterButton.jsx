@@ -34,7 +34,7 @@ function DisasterButton() {
       <section className="page2">
         <div className="page2-content">
           <div className="page2-left">
-            <h2>News</h2>  
+            <h2>News</h2>
             <div className="page2-left-button">
               {warningButtons.map((item, index) => (
                 <div
