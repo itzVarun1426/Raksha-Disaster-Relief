@@ -20,10 +20,10 @@ function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="#">Guide</Link>
+            <Link to="/guide">Guide</Link>
           </li>
           <li>
-            <Link to="#">Helpline</Link>
+            <Link to="/helpline">Helpline</Link>
           </li>
           <li>
             <Link to="/login">Login</Link>

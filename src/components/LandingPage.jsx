@@ -1,8 +1,8 @@
-import React from "react";
+// import React from "react";
 import styles from "./LandingPage.module.css";
 import Navbar from "./Navbar.jsx";
 import NewsSection from "./NewsSection.jsx";
-import DisasterButton from "./DisasterButton.jsx";
+// import DisasterButton from "./DisasterButton.jsx";
 import StatsSection from "./StatsSection.jsx";
 import ConceptSection from "./ConceptSection.jsx";
 import ContactForm from "./ContactForm.jsx";
