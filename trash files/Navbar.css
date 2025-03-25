@@ -90,4 +90,7 @@ nav {
 .scroll-text marquee {
   color: #014bdb;
   font-weight: 500;
+  :hover{
+    color: antiquewhite;
+  }
 }

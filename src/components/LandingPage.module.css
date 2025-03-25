@@ -1,4 +1,4 @@
-* {
+.root {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -7,13 +7,13 @@
   font-size: 16px;
 }
 
-body {
+.body {
   overflow-x: hidden;
   width: 100%;
   background-color: white;
 }
 
-html {
+.html {
   background-color: white;
   scroll-behavior: smooth;
 }
@@ -26,51 +26,40 @@ html {
   cursor: pointer;
 }
 
-main {
+.main {
   background: url("../assets/indianwoman.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
-  .sroll-text {
-    marquee {
-      background-color: #d0dffd;
-      font-size: 1.2rem;
-      color: red;
-      cursor: pointer;
-      &:hover {
-        color: #0066ff;
-      }
-    }
-  }
+  width: 100vw;
 }
 
-main::after {
-  content: '';
+.scrollText marquee {
+  background-color: #d0dffd;
+  font-size: 1.2rem;
+  color: red;
+  cursor: pointer;
+}
+
+.scrollText marquee:hover {
+  color: #0066ff;
+}
+
+.mainAfter {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.15);  /* Very subtle white overlay */
+  background: rgba(255, 255, 255, 0.15);
   z-index: -1;
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Add hover effect to marquee */
-.sroll-text marquee {
-  cursor: pointer;
-  &:hover {
-    color: #0066ff;
-  }
-}
-
-.auth-buttons {
+.authButtons {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
-.auth-button {
+.authButton {
   padding: 10px 20px;
   background-color: #014bdb;
   color: white;
@@ -81,6 +70,6 @@ html {
   transition: background-color 0.3s;
 }
 
-.auth-button:hover {
+.authButton:hover {
   background-color: #0066ff;
 }

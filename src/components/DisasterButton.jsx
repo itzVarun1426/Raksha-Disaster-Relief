@@ -12,9 +12,9 @@ import find from "../assets/find.png";
 import gov from "../assets/gov.png";
 import busInFloodImg from "../assets/busInFlood.jpg";
 import disasterReliefImg from "../assets/disasterRelief.jpg";
-import "./Section1.css";
+import "./DisasterButton.css";
 
-function Section1() {
+function DisasterButton() {
   const warningButtons = [
     { img: temp, title: "Fire", special: false },
     { img: flood, title: "Flood", special: false },
@@ -68,4 +68,4 @@ function Section1() {
   );
 }
 
-export default Section1;
+export default DisasterButton;

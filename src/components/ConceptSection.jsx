@@ -1,5 +1,5 @@
-import "./Section3.css";
-function Section3() {
+import "./ConceptSection.css";
+function ConceptSection() {
   return (
     <>
       <div className="page4">
@@ -37,4 +37,4 @@ function Section3() {
   );
 }
 
-export default Section3;
+export default ConceptSection;

@@ -1,19 +1,20 @@
 import ndrfImg from "../assets/ndrfImg.jpg";
-import "./Section2.css";
-function Section2() {
+import styles from "./StatsSection.module.css";
+
+function StatsSection() {
   return (
     <>
-      <div className="page3">
-        <div className="image-section">
+      <div className={styles.page3}>
+        <div className={styles.imageSection}>
           <img src={ndrfImg} alt="Rescue Operations" />
         </div>
-        <div className="stats-section">
+        <div className={styles.statsSection}>
           {[
             { number: "1000+", text: "Lives saved and reestablished" },
             { number: "20000+", text: "Successful Rescued operations" },
             { number: "3000+", text: "Missions accomplished successfully" },
           ].map((stat, index) => (
-            <div key={index} className="stat">
+            <div key={index} className={styles.stat}>
               <h2>{stat.number}</h2>
               <p>{stat.text}</p>
             </div>
@@ -24,4 +25,4 @@ function Section2() {
   );
 }
 
-export default Section2;
+export default StatsSection;
