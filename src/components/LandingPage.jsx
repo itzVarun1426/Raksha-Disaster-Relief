@@ -2,10 +2,8 @@
 import styles from "./LandingPage.module.css";
 import Navbar from "./Navbar.jsx";
 import NewsSection from "./NewsSection.jsx";
-// import DisasterButton from "./DisasterButton.jsx";
 import StatsSection from "./StatsSection.jsx";
 import ConceptSection from "./ConceptSection.jsx";
-import ContactForm from "./ContactForm.jsx";
 import Footer from "./Footer.jsx";
 import LandingPageAlert from "./LandingPage-Alert.jsx";
 
@@ -21,7 +19,7 @@ const LandingPage = () => {
         <NewsSection />
         <StatsSection />
         <ConceptSection />
-        <ContactForm />
+        {/* <ContactForm /> */}
         <Footer />
       </div>
     </div>
