@@ -7,6 +7,7 @@ import "./App.css";
 import GuidePage from "./components/GuidePage";
 import HelplinePage from "./components/HelplinePage";
 import AdminDashboard from "./components/AdminDashboard";
+import UserDashboard from "./components/UserDashboard";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/guide" element={<GuidePage />} />
       <Route path="/helpline" element={<HelplinePage />} />
       <Route path="/admindashboard" element={<AdminDashboard />} />
+      <Route path="/userdashboard" element={<UserDashboard />} />
     </Routes>
   );
 }

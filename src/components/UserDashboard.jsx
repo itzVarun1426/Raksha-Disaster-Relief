@@ -1,26 +1,20 @@
 // import React from "react";
-import styles from "./LandingPage.module.css";
+import styles from "./UserDashboard.module.css";
 import Navbar from "./Navbar.jsx";
 import NewsSection from "./NewsSection.jsx";
-// import DisasterButton from "./DisasterButton.jsx";
-import StatsSection from "./StatsSection.jsx";
-import ConceptSection from "./ConceptSection.jsx";
+import UserButtons from "./UserButtons.jsx";
 import ContactForm from "./ContactForm.jsx";
 import Footer from "./Footer.jsx";
-import LandingPageAlert from "./LandingPage-Alert.jsx";
 
-const LandingPage = () => {
+const UserDashboard = () => {
   return (
     <div className={styles.root}>
       <div className={styles.body}>
         <main className={styles.main}>
           <Navbar />
-          <LandingPageAlert />
-          {/* <DisasterButton /> */}
         </main>
+        <UserButtons />
         <NewsSection />
-        <StatsSection />
-        <ConceptSection />
         <ContactForm />
         <Footer />
       </div>
@@ -28,4 +22,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default UserDashboard;
